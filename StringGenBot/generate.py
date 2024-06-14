@@ -176,7 +176,7 @@ async def generate_session(bot: Client, msg: Message, telethon=False, old_pyro: 
         string_session = client.session.save()
     else:
         string_session = await client.export_session_string()
-    text = f"**✪ هذه هي جلسة {ty} الخاصة بك** \n\n`{string_session}` \n\n✪ **تم بواسطة سورس عفرتو :**@M_T_lI\n✪ يرجي عدم مشاركتها مع احد\n✪ ولا تنسى الانضمام @M_T_lI ♥"
+    text = f"**✪ هذه هي جلسة {ty} الخاصة بك** \n\n`{string_session}` \n\n✪ **تم بواسطة سورس  سفير :**@M_T_lI\n✪ يرجي عدم مشاركتها مع احد\n✪ ولا تنسى الانضمام @M_T_lI ♥"
     try:
         if not is_bot:
             await client.send_message("me", text)
@@ -185,7 +185,7 @@ async def generate_session(bot: Client, msg: Message, telethon=False, old_pyro: 
     except KeyError:
         pass
     await client.disconnect()
-    await bot.send_message(msg.chat.id, " تم انشاء الجلسة بنجاح ✅ {} \nيرجى التحقق من رسائلك المحفوظة للحصول عليها !\n✪ **تم بواسطة سورس عفرتو** @M_T_lI".format("تـيـلـثـون" if telethon else "بـايـࢪوجـࢪام"))
+    await bot.send_message(msg.chat.id, " تم انشاء الجلسة بنجاح ✅ {} \nيرجى التحقق من رسائلك المحفوظة للحصول عليها !\n✪ **تم بواسطة سورس  سفير** @M_T_lI".format("تـيـلـثـون" if telethon else "بـايـࢪوجـࢪام"))
 
 
 async def cancelled(msg):
